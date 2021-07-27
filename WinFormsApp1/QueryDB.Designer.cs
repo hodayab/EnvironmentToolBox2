@@ -35,7 +35,7 @@ namespace WinFormsApp1
             this.ValidDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRecharge = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,25 +90,27 @@ namespace WinFormsApp1
             this.btnRecharge.TabIndex = 1;
             this.btnRecharge.Text = "Recharge";
             this.btnRecharge.UseVisualStyleBackColor = true;
+            this.btnRecharge.Click += new System.EventHandler(this.btnRecharge_Click);
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(669, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Amount";
-            this.textBox1.Size = new System.Drawing.Size(119, 27);
-            this.textBox1.TabIndex = 2;
+            this.txtAmount.Location = new System.Drawing.Point(669, 96);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PlaceholderText = "Amount";
+            this.txtAmount.Size = new System.Drawing.Size(119, 27);
+            this.txtAmount.TabIndex = 2;
             // 
             // QueryDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.btnRecharge);
             this.Controls.Add(this.dataGridView1);
             this.Name = "QueryDB";
             this.Text = "QueryDB";
+            this.Load += new System.EventHandler(this.QueryDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,6 +125,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn ValidDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button btnRecharge;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }
