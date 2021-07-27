@@ -20,6 +20,7 @@ namespace WinFormsApp1
         string devToolPath;
         string migrationDbPath;
         string officePath;
+        string tfsPath;
 
         private NameValueCollection appConfig;
 
@@ -54,6 +55,7 @@ namespace WinFormsApp1
                     devToolPath = readAppSetting("devToolPath");
                     migrationDbPath = readAppSetting("migrationDbPath");
                     officePath = readAppSetting("officePath");
+                    tfsPath = readAppSetting("tfsPath");
                 }
             }
             catch (ConfigurationErrorsException e)
@@ -85,6 +87,15 @@ namespace WinFormsApp1
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
                 FileName = officePath,
+                UseShellExecute = true
+            });
+        }
+
+        private void button_tfs_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = tfsPath,
                 UseShellExecute = true
             });
         }

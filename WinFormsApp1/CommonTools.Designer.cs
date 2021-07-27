@@ -33,6 +33,7 @@ namespace WinFormsApp1
             this.button_openSpooky = new System.Windows.Forms.Button();
             this.button_devTool = new System.Windows.Forms.Button();
             this.button_office = new System.Windows.Forms.Button();
+            this.button_tfs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_openSpooky
@@ -74,11 +75,25 @@ namespace WinFormsApp1
             this.button_office.UseVisualStyleBackColor = true;
             this.button_office.Click += new System.EventHandler(this.button_office_Click);
             // 
+            // button_tfs
+            // 
+            this.button_tfs.Image = global::WinFormsApp1.Properties.Resources.tfs;
+            this.button_tfs.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_tfs.Location = new System.Drawing.Point(42, 202);
+            this.button_tfs.Name = "button_tfs";
+            this.button_tfs.Size = new System.Drawing.Size(110, 142);
+            this.button_tfs.TabIndex = 3;
+            this.button_tfs.Text = "Tfs";
+            this.button_tfs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_tfs.UseVisualStyleBackColor = true;
+            this.button_tfs.Click += new System.EventHandler(this.button_tfs_Click);
+            // 
             // CommonTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 407);
+            this.Controls.Add(this.button_tfs);
             this.Controls.Add(this.button_office);
             this.Controls.Add(this.button_devTool);
             this.Controls.Add(this.button_openSpooky);
@@ -93,5 +108,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button_openSpooky;
         private System.Windows.Forms.Button button_devTool;
         private System.Windows.Forms.Button button_office;
+        private System.Windows.Forms.Button button_tfs;
     }
 }

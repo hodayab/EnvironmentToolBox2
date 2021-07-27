@@ -28,5 +28,11 @@ namespace WinFormsApp1
             CommonTools win = new CommonTools();
             win.Show();
         }
+
+        private void button_log_Click(object sender, EventArgs e)
+        {
+            ShowLogs win = new ShowLogs();
+            win.Show();
+        }
     }
 }

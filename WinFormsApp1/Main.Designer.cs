@@ -34,6 +34,7 @@ namespace WinFormsApp1
             this.button_openGetVersion = new System.Windows.Forms.Button();
             this.button_openCommonTools = new System.Windows.Forms.Button();
             this.button_openConfiguration = new System.Windows.Forms.Button();
+            this.button_log = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_openQueries
@@ -79,22 +80,37 @@ namespace WinFormsApp1
             // 
             // button_openConfiguration
             // 
-            this.button_openConfiguration.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_openConfiguration.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_openConfiguration.Image = ((System.Drawing.Image)(resources.GetObject("button_openConfiguration.Image")));
             this.button_openConfiguration.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_openConfiguration.Location = new System.Drawing.Point(572, 81);
             this.button_openConfiguration.Name = "button_openConfiguration";
-            this.button_openConfiguration.Size = new System.Drawing.Size(151, 135);
+            this.button_openConfiguration.Size = new System.Drawing.Size(135, 135);
             this.button_openConfiguration.TabIndex = 3;
             this.button_openConfiguration.Text = "Configurations";
             this.button_openConfiguration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_openConfiguration.UseVisualStyleBackColor = true;
             // 
+            // button_log
+            // 
+            this.button_log.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_log.Image = ((System.Drawing.Image)(resources.GetObject("button_log.Image")));
+            this.button_log.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_log.Location = new System.Drawing.Point(749, 81);
+            this.button_log.Name = "button_log";
+            this.button_log.Size = new System.Drawing.Size(135, 135);
+            this.button_log.TabIndex = 4;
+            this.button_log.Text = "Logs";
+            this.button_log.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_log.UseVisualStyleBackColor = true;
+            this.button_log.Click += new System.EventHandler(this.button_log_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 344);
+            this.ClientSize = new System.Drawing.Size(1014, 315);
+            this.Controls.Add(this.button_log);
             this.Controls.Add(this.button_openConfiguration);
             this.Controls.Add(this.button_openCommonTools);
             this.Controls.Add(this.button_openGetVersion);
@@ -111,6 +127,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button_openGetVersion;
         private System.Windows.Forms.Button button_openCommonTools;
         private System.Windows.Forms.Button button_openConfiguration;
+        private System.Windows.Forms.Button button_log;
     }
 }
 
