@@ -17,5 +17,16 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QuerySearchForm win = new QuerySearchForm();
+            win.Show();
+        }
+
+        private void button_openCommonTools_Click(object sender, EventArgs e)
+        {
+            CommonTools win = new CommonTools();
+            win.Show();
+        }
     }
 }
