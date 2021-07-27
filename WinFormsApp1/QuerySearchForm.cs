@@ -16,5 +16,30 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            LoadListBox(checkedListBox1.CheckedItems, e.Index, e.NewValue);
+        }
+
+        private void LoadListBox(CheckedListBox.CheckedItemCollection checkedItems, int index, CheckState newValue)
+        {
+            listBox1.Items.Clear();
+
+            if (checkedItems.Count > 1 || newValue == CheckState.Checked)
+            {
+                listBox1.Items.Add("Available Cards");
+            }
+        }
+
+        void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.listBox1.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches)
+            {
+                QueryDB queryDB = new QueryDB();
+                queryDB.ShowDialog();
+            }
+        }
     }
 }
