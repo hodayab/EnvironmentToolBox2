@@ -31,6 +31,12 @@ namespace WinFormsApp1
             win.Show();
         }
 
+        private void button_log_Click(object sender, EventArgs e)
+        {
+            ShowLogs win = new ShowLogs();
+            win.Show();
+        }
+
         private void ConnectToPulseButton_Click(object sender, EventArgs e)
         {
             BackgroundWorker worker = new BackgroundWorker();
