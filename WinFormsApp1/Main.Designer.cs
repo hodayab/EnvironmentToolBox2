@@ -34,6 +34,7 @@ namespace WinFormsApp1
             this.button_openGetVersion = new System.Windows.Forms.Button();
             this.button_openCommonTools = new System.Windows.Forms.Button();
             this.button_openConfiguration = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_openQueries
@@ -90,11 +91,26 @@ namespace WinFormsApp1
             this.button_openConfiguration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_openConfiguration.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(766, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 135);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Connect to PulseSecure";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ConnectToPulseButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 344);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_openConfiguration);
             this.Controls.Add(this.button_openCommonTools);
             this.Controls.Add(this.button_openGetVersion);
@@ -111,6 +127,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button_openGetVersion;
         private System.Windows.Forms.Button button_openCommonTools;
         private System.Windows.Forms.Button button_openConfiguration;
+        private System.Windows.Forms.Button button1;
     }
 }
 
